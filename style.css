@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #8f87f1;
+    background: linear-gradient(180deg, #8f87f1 0%, #aa8af7 25%, #e9a5f1 75%, #fed2e2 100%);
+    font-family: "Montserrat", sans-serif;
+}
+
+button {
+    font-family: "Montserrat Alternates", sans-serif;
+    cursor: pointer;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    padding: 1rem;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(143, 135, 241, 1);
+}
+
+.subtitle {
+    width: 100%;
+    margin-top: 4px;
+    font-size: .8rem;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 1);
+}
+
+.todo-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .25);
+    border-radius: 8px;
+    padding: 1.2rem;
+}
+
+/* FORM */
+.todo-wrapper form {
+    width: 100%;
+}
+
+.todo-wrapper form div {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.todo-wrapper input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #e9a5f1;
+    border-radius: 4px;
+    outline-color: #8f87f1;
+    font-family: "Montserrat", sans-serif;
+}
+
+.todo-wrapper button {
+    width: 100%;
+}
+
+.todo-wrapper .pretty-button {
+    padding: 5px 20px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: 1px solid;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.todo-wrapper .pretty-button:hover,
+.todo-wrapper .pretty-button:focus {
+    color: white !important;
+}
+
+/* LIST */
+.todo-list-container {
+    width: 100%;
+    min-height: 20px;
+    margin: 2rem 0;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.todo-wrapper ol {
+    list-style-type: none;
+}
+
+.todo-wrapper ol li {
+    padding: 4px;
+    font-size: small;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.todo-wrapper ol li:nth-child(even) {
+    background: #e9a5f1;
+}
+
+.todo-wrapper .completed {
+    text-decoration: line-through;
+    color: #666;
+}
+
+/* CONTROL BUTTON */
+#control-wrapper {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.todo-wrapper #add-button {
+    border-color: #0093D5;
+    color: #0093D5;
+}
+
+.todo-wrapper #clear-completed-button {
+    border-color: #0093D5;
+    color: #0093D5;
+}
+
+.todo-wrapper #empty-button {
+    border-color: #9B1C20;
+    color: #9B1C20;
+}
+
+.todo-wrapper #save-button {
+    border-color: #49B749;
+    color: #49B749;
+}
+
+.todo-wrapper #add-button:hover,
+.todo-wrapper #add-button:focus {
+    background-color: #0093D5;
+}
+
+.todo-wrapper #clear-completed-button:hover,
+.todo-wrapper #clear-completed-button:focus {
+    background-color: #0093D5;
+}
+
+.todo-wrapper #empty-button:hover,
+.todo-wrapper #empty-button:focus {
+    background-color: #9B1C20;
+}
+
+.todo-wrapper #save-button:hover,
+.todo-wrapper #save-button:focus {
+    background-color: #49B749;
+}
+
+@media only screen and (min-width: 750px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .todo-wrapper {
+        width: 75%;
+        padding: 2rem;
+    }
+
+    #control-wrapper {
+        flex-direction: row;
+    }
+}
